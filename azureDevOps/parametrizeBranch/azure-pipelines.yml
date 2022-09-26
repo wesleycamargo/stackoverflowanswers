@@ -1,0 +1,12 @@
+resources:
+  repositories:
+    - repository: branchRef
+      type: github
+      name: wesleycamargo/stackoverflowanswers
+
+steps:
+  - powershell: |
+      $branch = $env:BUILD_SOURCEBRANCH
+      
+      Write-Host "Git Branch: $branch"
+    displayName: 'Set branch name'
