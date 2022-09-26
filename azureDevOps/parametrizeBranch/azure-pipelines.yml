@@ -3,6 +3,7 @@ resources:
     - repository: branchRef
       type: github
       name: wesleycamargo/stackoverflowanswers
+      endpoint: Stack Overflow Answers
 
 steps:
   - powershell: |
