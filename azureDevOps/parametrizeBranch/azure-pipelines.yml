@@ -1,6 +1,6 @@
 parameters:
   - name: "branchName"
-    value: "$(Build.SourceBranch)"
+    default: $(Build.SourceBranch)
 
 resources:
   repositories:
