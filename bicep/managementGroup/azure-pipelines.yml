@@ -1,0 +1,6 @@
+steps:
+  - powershell: |
+      az deployment tenant create `
+        --name "myDeployment" `
+        --location "westeurope" `
+        --template-file "main.bicep"        
