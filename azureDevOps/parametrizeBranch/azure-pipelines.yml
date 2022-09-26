@@ -7,7 +7,7 @@ variables:
     ${{ if eq(parameters.branchName, '') }}:
       value: $(Build.SourceBranch)
     ${{ else }}:
-      value: $[parameters.branchName]
+      value: ${{ parameters.branchName }}
     
 resources:
   repositories:
