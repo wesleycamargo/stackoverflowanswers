@@ -3,4 +3,4 @@ steps:
       az deployment tenant create `
         --name "myDeployment" `
         --location "westeurope" `
-        --template-file "main.bicep"        
+        --template-file "bicep/managementGroup/main.bicep"        
