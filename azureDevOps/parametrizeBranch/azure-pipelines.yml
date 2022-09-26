@@ -1,7 +1,14 @@
 parameters:
-  - name: "branchName"
-    default: $(Build.SourceBranch)
+  - name: "branchName"    
+    default: ""
 
+variables:
+  - name: "branchName"
+    ${{ if eq(parameters.branchName, '') }}:
+      value: $(Build.SourceBranch)
+    ${{ else }}:
+      value: $[parameters.branchName]
+    
 resources:
   repositories:
     - repository: branchRef
