@@ -26,7 +26,7 @@ steps:
   - checkout: branchRef
     
   - powershell: |
-      $branch = $env:BUILD_SOURCEBRANCH
+      cd $(Build.SourcesDirectory)
       
-      Write-Host "Git Branch: $branch"
+      git branch
     displayName: 'Set branch name'
