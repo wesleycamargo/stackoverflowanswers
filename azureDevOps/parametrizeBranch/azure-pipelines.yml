@@ -4,7 +4,13 @@ resources:
       type: github
       name: wesleycamargo/stackoverflowanswers
       endpoint: Stack Overflow Answers
+      ref: $(Build.SourceBranch)
 
+trigger:
+  branches:
+    include:
+      - main
+      
 steps:
   - powershell: |
       $branch = $env:BUILD_SOURCEBRANCH
