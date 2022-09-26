@@ -1,6 +1,7 @@
 parameters:
   - name: "branchName"    
-    default: ""
+    default: "main"
+
 
 variables:
   - name: "branchName"
