@@ -10,4 +10,4 @@ steps:
       inlineScript: |
         az deployment tenant create `
           --location "westeurope" `
-          --template-file "bicep/managementGroup/main.bicep"
+          --template-file "bicep/managementGroup/managementGroup.bicep"
