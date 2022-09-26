@@ -1,17 +1,23 @@
+parameters:
+  - name: "branchName"
+    value: "$(Build.SourceBranch)"
+
 resources:
   repositories:
     - repository: branchRef
       type: github
       name: wesleycamargo/stackoverflowanswers
       endpoint: Stack Overflow Answers
-      ref: $(Build.SourceBranch)
-
-trigger:
-  branches:
-    include:
-      - main
+      ref: $(branchName)
+      trigger:
+        branches:
+          include:
+            - main
+            - feature/*
       
 steps:
+  - checkout: branchRef
+    
   - powershell: |
       $branch = $env:BUILD_SOURCEBRANCH
       
